@@ -2,6 +2,16 @@
 
 A free, GPL-licensed WordPress plugin for scheduling human review of published posts and pages. It keeps one explicit next due date, one eligible editor, and a private append-only action history. English and Polish strings are bundled. It sends no reminders and changes no public content when a review action is saved.
 
+## Website guides and stable release
+
+- [Content Review Queue: English overview and installation](https://www.digicyfr.com/en/wordpress-plugins/digicyfr-content-review-queue)
+- [Kolejka przeglądu treści: opis i instalacja po polsku](https://www.digicyfr.com/pl/wordpress-plugins/digicyfr-content-review-queue)
+- [Stable v0.1.0 release, ZIP and checksum](https://github.com/digicyfr/digicyfr-content-review-queue/releases/tag/v0.1.0)
+
+<a href="https://www.digicyfr.com/en/wordpress-plugins/digicyfr-content-review-queue"><img src="https://www.digicyfr.com/images/wordpress-plugins/digicyfr-content-review-queue.png" alt="Private content review queue showing upcoming work" width="520"></a>
+
+_Example screenshot from a disposable test site._
+
 ## Install and use
 
 1. Upload the release ZIP under **Plugins → Add New → Upload Plugin** and activate it. Requires WordPress 7.1+ and PHP 8.3+.
