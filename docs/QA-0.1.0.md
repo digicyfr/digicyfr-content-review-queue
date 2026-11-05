@@ -2,7 +2,7 @@
 
 ## Exact candidate
 
-- ZIP: `dist/digicyfr-content-review-queue-0.1.0.zip`
+- ZIP: `dist/digicyfr-content-review-queue-0.1.0.zip`; the byte-identical ZIP is published as a GitHub prerelease.
 - SHA-256: `ef5fe7dbc2acf8b3601c340aca38ef1a791eb474e5a33494ee1cf5780d590113`
 - `tools/verify_zip.py ... --against-source`: passed; all 10 runtime/documentation files match source byte-for-byte.
 - Target tested locally: WordPress 7.1, PHP 8.3.33, MariaDB 11.4.13. This evidence does not claim compatibility with untested newer releases.
@@ -20,10 +20,22 @@
 
 On the runtime-identical earlier ZIP, the orchestrator's fresh Chromium run passed initial schedule from blank (date entry unchecked Unscheduled), keyboard Enter submission, focus on the result notice after redirect, Upcoming queue, 390px layout without overflow, and filtered CSV download. A second disposable Chromium run loaded a saved-notice queue URL and confirmed `document.activeElement` was the `.dcrq-result` notice after 500 ms. A third disposable Chromium run confirmed the panel in both block and classic editors (a test-only must-use filter selected classic), and an authenticated `admin-post.php` schedule POST without its nonce returned HTTP 403. Mobile table keeps real headers in a horizontally scrollable table. Native controls have associated labels, help text, and text status; errors have `role="alert"`.
 
+## Post-tag browser check on the exact GitHub ZIP
+
+On 2026-11-05, the public `v0.1.0` ZIP and sidecar were downloaded from GitHub and passed `sha256sum --check` at the hash above. The ZIP installed, activated, deactivated and reactivated on a new disposable WordPress 7.1/PHP 8.3.33/MariaDB 11.4.13 site. Chromium 156.0.8078.4 exercised a synthetic published page:
+
+- Saved a due date, eligible assignee and note through the private item form. The redirected success notice received focus and the date persisted. [Scheduled item](evidence/0.1.0/digicyfr-review-queue-scheduled.png).
+- The item appeared in the **Upcoming** filter; the filtered CSV download contained its title and due date. [Upcoming queue](evidence/0.1.0/digicyfr-review-queue-upcoming.png).
+- **Mark reviewed** added a history event and focused the success notice. **Snooze due date** saved a later date and history event. [Review history](evidence/0.1.0/digicyfr-review-queue-reviewed.png) · [Snoozed item](evidence/0.1.0/digicyfr-review-queue-snoozed.png).
+- An invalid past review date returned the error notice with focus. [Invalid-date notice](evidence/0.1.0/digicyfr-review-queue-error.png).
+- The block editor showed the three action controls with the saved due date. [Editor panel](evidence/0.1.0/digicyfr-review-queue-editor.png). A separate 390px session showed document width equal to the viewport, without page errors. [390px queue](evidence/0.1.0/digicyfr-review-queue-390px.png).
+
+Only synthetic data was used. The disposable containers and volumes were removed. A human screen-reader pass and representative small-team staging flow remain open.
+
 ## Current artifact recheck and limits
 
 On 2026-11-05, the rebuilt ZIP and SHA-256 sidecar matched the standalone and workspace packagers. This exact rebuilt ZIP passed install/activate/deactivate/reactivate and the complete WordPress integration fixture on the tested stack. Earlier browser and Plugin Check evidence is from a byte-different ZIP with identical runtime files.
 
 - Administrator export streams rows; the public `csv_contents()` helper materializes a CSV only for tests and internal calls. Large queue scans may be slow because WordPress post meta is queried in 100-ID batches, then each row is checked with `edit_post` before pagination/CSV. The assignee selector lists eligible users by loading all users, which is suitable for the small-team v0.1 scope and may become slow on a very large user directory.
 - Test harness directly calls the action engine for most fixtures; a separate browser POST verifies exact `admin-post.php` missing-nonce rejection. WordPress core's `check_admin_referer` performs the nonce check. Valid action POST and redirect were exercised in the orchestrator's browser run.
-- No publishing, deployment, WordPress.org submission, or external upload was performed.
+- A public GitHub prerelease exists. No digicyfr.com production publication, WordPress.org submission or live customer-site installation was performed.
