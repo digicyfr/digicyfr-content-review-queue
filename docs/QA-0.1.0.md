@@ -2,7 +2,7 @@
 
 ## Exact candidate
 
-- ZIP: `dist/digicyfr-content-review-queue-0.1.0.zip`; the byte-identical ZIP is published as a GitHub prerelease.
+- ZIP: `dist/digicyfr-content-review-queue-0.1.0.zip`; the byte-identical ZIP is published as a GitHub release.
 - SHA-256: `ef5fe7dbc2acf8b3601c340aca38ef1a791eb474e5a33494ee1cf5780d590113`
 - `tools/verify_zip.py ... --against-source`: passed; all 10 runtime/documentation files match source byte-for-byte.
 - Target tested locally: WordPress 7.1, PHP 8.3.33, MariaDB 11.4.13. This evidence does not claim compatibility with untested newer releases.
@@ -46,4 +46,4 @@ On 2026-11-05, the rebuilt ZIP and SHA-256 sidecar matched the standalone and wo
 
 - Administrator export streams rows; the public `csv_contents()` helper materializes a CSV only for tests and internal calls. Large queue scans may be slow because WordPress post meta is queried in 100-ID batches, then each row is checked with `edit_post` before pagination/CSV. The assignee selector lists eligible users by loading all users, which is suitable for the small-team v0.1 scope and may become slow on a very large user directory.
 - Test harness directly calls the action engine for most fixtures; a separate browser POST verifies exact `admin-post.php` missing-nonce rejection. WordPress core's `check_admin_referer` performs the nonce check. Valid action POST and redirect were exercised in the orchestrator's browser run.
-- A public GitHub prerelease exists. No digicyfr.com production publication, WordPress.org submission or live customer-site installation was performed.
+- The public GitHub release is stable for self-hosted manual ZIP installation after the documented exact-ZIP integration and automated browser/accessibility checks. No WordPress.org submission or live customer-site installation was performed. Human screen-reader use and representative team workflows remain untested; the automation is not a WCAG conformance claim.
