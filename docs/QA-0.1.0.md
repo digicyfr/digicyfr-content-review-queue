@@ -32,6 +32,14 @@ On 2026-11-05, the public `v0.1.0` ZIP and sidecar were downloaded from GitHub a
 
 Only synthetic data was used. The disposable containers and volumes were removed. A human screen-reader pass and representative small-team staging flow remain open.
 
+## Automated accessibility audit on the exact public ZIP (2026-11-05)
+
+The public ZIP and SHA-256 sidecar were downloaded again and verified at the hash above; all ten packaged files matched source. In a fresh disposable WordPress 7.1/PHP 8.3.33/MariaDB 11.4.13 site, Playwright Chromium 156 with axe-core 4.10.3 audited the full **Unscheduled** queue, a synthetic page's **Manage review** form, and each plugin-owned `.wrap` subtree against WCAG 2/2.1/2.2 A/AA rules. Both plugin pages had **zero definite axe violations** at desktop and 390px. The WordPress core Pages list baseline had a `link-in-text-block` finding on its **Privacy Policy** row, absent on the plugin pages. [Machine-readable audit](evidence/0.1.0/axe-admin-20261105.json).
+
+Keyboard Enter on **Manage review** opened the form. The date input showed a visible 2px focus outline under keyboard Tab. Chrome's accessibility tree exposed named Unscheduled, Save schedule, Mark reviewed, and Snooze due date controls. The queue and item documents stayed 390px wide, with the queue's 863px table scrolling within its 366px container; no browser script errors occurred. [390px queue](evidence/0.1.0/a11y-queue-390px.png) · [390px item form](evidence/0.1.0/a11y-item-390px.png).
+
+Axe could not determine color contrast for the native assignee select and partly obscured note textarea; those incomplete checks are not passes. Automated coverage and the keyboard check do not replace a human screen-reader session or the representative small-team staging flow.
+
 ## Current artifact recheck and limits
 
 On 2026-11-05, the rebuilt ZIP and SHA-256 sidecar matched the standalone and workspace packagers. This exact rebuilt ZIP passed install/activate/deactivate/reactivate and the complete WordPress integration fixture on the tested stack. Earlier browser and Plugin Check evidence is from a byte-different ZIP with identical runtime files.

@@ -12,6 +12,6 @@ WordPress 7.1, PHP 8.3.33 and MariaDB 11.4.13. The exact GitHub prerelease ZIP p
 
 ## Limits and follow-up checks
 
-A manual screen-reader pass, a representative small-team staging flow, multisite behavior, and very large editorial teams remain untested. Assignee selection and queue scans may be slow at large scale. The plugin sends no reminders or email.
+A post-tag axe-core 4.10.3 check of the exact public ZIP found no definite violations on the private queue or item form at desktop or 390px; keyboard focus and named action controls were also checked. Some native-control contrast cases remained inconclusive to axe. See the [dated QA evidence](docs/QA-0.1.0.md). A manual screen-reader pass, a representative small-team staging flow, multisite behavior, and very large editorial teams remain untested. Assignee selection and queue scans may be slow at large scale. The plugin sends no reminders or email.
 
 The `Update URI` protects this self-hosted plugin from an unrelated WordPress.org plugin with the same slug. It does not provide automatic updates. WordPress.org submission would need a separate review and distribution-specific changes. See [QA record](docs/QA-0.1.0.md) for the detailed local evidence.

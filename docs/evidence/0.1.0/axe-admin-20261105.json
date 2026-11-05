@@ -1,0 +1,183 @@
+{
+  "date": "2026-11-05",
+  "browser": "Chromium 156.0.8078.4",
+  "axeVersion": "4.10.3",
+  "zipSha256": "ef5fe7dbc2acf8b3601c340aca38ef1a791eb474e5a33494ee1cf5780d590113",
+  "baseline": {
+    "violations": [
+      {
+        "id": "link-in-text-block",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "th[aria-label=\"Privacy Policy\"] > strong > .row-title"
+            ],
+            "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.3:1 with the surrounding text. (Minimum contrast is 3:1, link text: #3858e9, surrounding text: #50575e)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+          }
+        ]
+      }
+    ],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          {
+            "target": [
+              "#bulk-action-selector-top"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          },
+          {
+            "target": [
+              "#filter-by-date"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          },
+          {
+            "target": [
+              "#bulk-action-selector-bottom"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          }
+        ]
+      },
+      {
+        "id": "th-has-data-cells",
+        "nodes": [
+          {
+            "target": [
+              ".wp-list-table"
+            ],
+            "summary": "Fix all of the following:\n  Table data cells are missing or empty"
+          }
+        ]
+      }
+    ],
+    "passes": 32
+  },
+  "queueFull": {
+    "violations": [],
+    "incomplete": [],
+    "passes": 32
+  },
+  "queueLocal": {
+    "violations": [],
+    "incomplete": [],
+    "passes": 15
+  },
+  "itemFull": {
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          {
+            "target": [
+              "#dcrq-4-queue-assignee"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          },
+          {
+            "target": [
+              "#dcrq-4-queue-note"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+          }
+        ]
+      }
+    ],
+    "passes": 30
+  },
+  "itemLocal": {
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          {
+            "target": [
+              "#dcrq-4-queue-assignee"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          },
+          {
+            "target": [
+              "#dcrq-4-queue-note"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+          }
+        ]
+      }
+    ],
+    "passes": 14
+  },
+  "queueMobile": {
+    "violations": [],
+    "incomplete": [],
+    "passes": 16
+  },
+  "itemMobile": {
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          {
+            "target": [
+              "#dcrq-4-queue-assignee"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          },
+          {
+            "target": [
+              "#dcrq-4-queue-note"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+          }
+        ]
+      }
+    ],
+    "passes": 14
+  },
+  "focusStart": {
+    "tag": "BODY",
+    "id": "",
+    "classes": "wp-admin wp-core-ui js tools_page_digicyfr-content-review-queue auto-fold admin-bar branch-7-1 version-7-1 admin-color-modern locale-en-us svg wp-theme-twentytwentyfive customize-support sticky-menu"
+  },
+  "focusTab": {
+    "tag": "INPUT",
+    "id": "dcrq-4-queue-due",
+    "outline": "solid",
+    "width": "2px"
+  },
+  "axNames": [
+    {
+      "role": "checkbox",
+      "name": "Unscheduled"
+    },
+    {
+      "role": "button",
+      "name": "Save schedule"
+    },
+    {
+      "role": "button",
+      "name": "Mark reviewed"
+    },
+    {
+      "role": "button",
+      "name": "Snooze due date"
+    }
+  ],
+  "mobileQueue": {
+    "viewport": 390,
+    "document": 390,
+    "table": 863,
+    "container": 366
+  },
+  "mobileItem": {
+    "viewport": 390,
+    "document": 390
+  },
+  "errors": []
+}
