@@ -1,0 +1,214 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Digicyfr Content Review Queue 0.1.0\n"
+"Language: pl_PL\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+msgid "A private, date-based review queue for published posts and pages."
+msgstr "Prywatna kolejka przeglądu opublikowanych wpisów i stron oparta na datach."
+
+msgid "A review needs a next due date after today, or Unscheduled."
+msgstr "Przegląd wymaga następnej daty po dzisiejszym dniu albo opcji Bez terminu."
+
+msgid "Actions"
+msgstr "Działania"
+
+msgid "Another review action is in progress. Try again."
+msgstr "Trwa inne działanie przeglądu. Spróbuj ponownie."
+
+msgid "Assignee"
+msgstr "Osoba odpowiedzialna"
+
+msgid "Back to queue"
+msgstr "Wróć do kolejki"
+
+msgid "Choose a user who can edit this item."
+msgstr "Wybierz użytkownika, który może edytować ten element."
+
+msgid "Choose an eligible editor or Unassigned."
+msgstr "Wybierz uprawnionego redaktora albo opcję Bez przypisania."
+
+msgid "Clear the date before choosing Unscheduled."
+msgstr "Wyczyść datę przed wybraniem opcji Bez terminu."
+
+msgid "Content Review Queue"
+msgstr "Kolejka przeglądu treści"
+
+msgid "Current status:"
+msgstr "Aktualny stan:"
+
+msgid "Dates use the WordPress site timezone. Review requires a future next date or Unscheduled. Snooze requires a future date and a reason; it does not mark content reviewed."
+msgstr "Daty używają strefy czasowej witryny WordPress. Przegląd wymaga przyszłej daty albo opcji Bez terminu. Odroczenie wymaga przyszłej daty i powodu; nie oznacza treści jako sprawdzonej."
+
+msgid "Due date"
+msgstr "Termin"
+
+msgid "Due dates are site-local calendar dates. Only published posts and pages you can edit appear here. No reminders are sent."
+msgstr "Terminy to daty kalendarzowe w strefie czasowej witryny. Widać tu tylko opublikowane wpisy i strony, które możesz edytować. Przypomnienia nie są wysyłane."
+
+msgid "Due today"
+msgstr "Na dziś"
+
+msgid "Enable JavaScript to submit review actions from this panel."
+msgstr "Włącz JavaScript, aby przesyłać działania przeglądu z tego panelu."
+
+msgid "Enter a real YYYY-MM-DD due date or choose Unscheduled."
+msgstr "Podaj poprawną datę RRRR-MM-DD albo wybierz Bez terminu."
+
+msgid "Enter a valid date for this action."
+msgstr "Podaj poprawną datę dla tego działania."
+
+msgid "Enter a valid due date."
+msgstr "Podaj poprawny termin."
+
+msgid "Export filtered CSV"
+msgstr "Eksportuj przefiltrowany CSV"
+
+msgid "Former user #%d"
+msgstr "Dawny użytkownik #%d"
+
+msgid "Last reviewed"
+msgstr "Ostatni przegląd"
+
+msgid "Manage review"
+msgstr "Zarządzaj przeglądem"
+
+msgid "Mark reviewed"
+msgstr "Oznacz jako sprawdzone"
+
+msgid "Next due date"
+msgstr "Następny termin"
+
+msgid "Next page"
+msgstr "Następna strona"
+
+msgid "No editable items match this queue view."
+msgstr "Brak edytowalnych elementów w tym widoku kolejki."
+
+msgid "Not tracked"
+msgstr "Nieśledzony"
+
+msgid "Note or snooze reason (500 characters maximum)"
+msgstr "Notatka lub powód odroczenia (maksymalnie 500 znaków)"
+
+msgid "Overdue"
+msgstr "Po terminie"
+
+msgid "Overdue + due today"
+msgstr "Po terminie i na dziś"
+
+msgid "Page"
+msgstr "Strona"
+
+msgid "Post"
+msgstr "Wpis"
+
+msgid "Previous page"
+msgstr "Poprzednia strona"
+
+msgid "Queue status"
+msgstr "Stan kolejki"
+
+msgid "Recent review history"
+msgstr "Ostatnia historia przeglądów"
+
+msgid "Review action saved."
+msgstr "Zapisano działanie przeglądu."
+
+msgid "Review action was not saved. Check the fields and try again."
+msgstr "Nie zapisano działania przeglądu. Sprawdź pola i spróbuj ponownie."
+
+msgid "Review actions for:"
+msgstr "Działania przeglądu dla:"
+
+msgid "Review data was not saved. Please try again."
+msgstr "Nie zapisano danych przeglądu. Spróbuj ponownie."
+
+msgid "Review data was only partly saved. Ask an administrator to inspect it before retrying."
+msgstr "Dane przeglądu zapisano tylko częściowo. Poproś administratora o sprawdzenie przed ponowną próbą."
+
+msgid "Reviewed"
+msgstr "Sprawdzono"
+
+msgid "Save schedule"
+msgstr "Zapisz termin"
+
+msgid "Schedule this item before snoozing it."
+msgstr "Zaplanuj ten element przed odroczeniem."
+
+msgid "Scheduled"
+msgstr "Zaplanowano"
+
+msgid "Search"
+msgstr "Szukaj"
+
+msgid "Search posts and pages"
+msgstr "Szukaj wpisów i stron"
+
+msgid "Snooze due date"
+msgstr "Odrocz termin"
+
+msgid "Snooze needs a future date and a reason, on a scheduled item."
+msgstr "Odroczenie zaplanowanego elementu wymaga przyszłej daty i powodu."
+
+msgid "Snooze needs a future date and a reason."
+msgstr "Odroczenie wymaga przyszłej daty i powodu."
+
+msgid "Snooze needs a future date."
+msgstr "Odroczenie wymaga przyszłej daty."
+
+msgid "Snoozed"
+msgstr "Odroczono"
+
+msgid "Status"
+msgstr "Stan"
+
+msgid "The note is too long."
+msgstr "Notatka jest za długa."
+
+msgid "The note must be at most 500 characters."
+msgstr "Notatka może mieć maksymalnie 500 znaków."
+
+msgid "The selected user cannot edit this item."
+msgstr "Wybrany użytkownik nie może edytować tego elementu."
+
+msgid "This action needs a valid request ID."
+msgstr "To działanie wymaga prawidłowego identyfikatora żądania."
+
+msgid "This action was already recorded; no duplicate event was added."
+msgstr "To działanie zostało już zapisane; nie dodano duplikatu zdarzenia."
+
+msgid "Title"
+msgstr "Tytuł"
+
+msgid "Type"
+msgstr "Typ"
+
+msgid "Unassigned"
+msgstr "Bez przypisania"
+
+msgid "Unknown action"
+msgstr "Nieznane działanie"
+
+msgid "Unknown review action."
+msgstr "Nieznane działanie przeglądu."
+
+msgid "Unscheduled"
+msgstr "Bez terminu"
+
+msgid "Upcoming"
+msgstr "Nadchodzące"
+
+msgid "You cannot export this queue."
+msgstr "Nie możesz eksportować tej kolejki."
+
+msgid "You cannot manage review data for this item."
+msgstr "Nie możesz zarządzać danymi przeglądu tego elementu."
+
+msgid "You cannot view this item."
+msgstr "Nie możesz wyświetlić tego elementu."
+
+msgid "You cannot view this review queue."
+msgstr "Nie możesz wyświetlić tej kolejki przeglądu."

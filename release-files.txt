@@ -1,0 +1,10 @@
+# Runtime files and user documentation only.
+digicyfr-content-review-queue.php
+includes
+assets
+languages/digicyfr-content-review-queue-pl_PL.mo
+languages/digicyfr-content-review-queue-pl_PL.po
+readme.txt
+README.md
+CHANGELOG.md
+LICENSE

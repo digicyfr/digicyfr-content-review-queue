@@ -1,0 +1,40 @@
+name: Plugin checks
+
+on:
+  push:
+    branches: [main, 'release/**']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install PHP CLI
+        run: sudo apt-get update && sudo apt-get install -y php8.3-cli
+      - name: Lint PHP and JavaScript
+        run: |
+          set -euo pipefail
+          find . -type f -name '*.php' -not -path './dist/*' -print0 | xargs -0 -n1 php -l
+          find . -type f -name '*.js' -not -path './dist/*' -print0 | xargs -0 -r -n1 node --check
+      - name: Build and verify release ZIP
+        run: |
+          set -euo pipefail
+          python3 scripts/release.py
+          python3 scripts/release.py --verify dist/digicyfr-content-review-queue-0.1.0.zip
+          (cd dist && sha256sum -c digicyfr-content-review-queue-0.1.0.zip.sha256)
+      - name: WordPress integration
+        run: bash tests/run-wordpress-integration.sh dist/digicyfr-content-review-queue-0.1.0.zip
+      - name: Upload checked ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: digicyfr-content-review-queue-candidate
+          path: |
+            dist/digicyfr-content-review-queue-0.1.0.zip
+            dist/digicyfr-content-review-queue-0.1.0.zip.sha256
+          if-no-files-found: ignore
